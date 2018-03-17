@@ -3,19 +3,19 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBiosTest\Authentication\Hybrid\Doctrine;
+namespace MSBiosTest\Cache;
 
-use MSBios\Authentication\Hybrid\Doctrine\Module;
+use MSBios\Cache\Module;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ModuleTest
- * @package MSBiosTest\Authentication\Hybrid\Doctrine
+ * @package MSBiosTest\Cache
  */
 class ModuleTest extends TestCase
 {
     /**
-     *
+     * @inheritdoc
      */
     public function testGetConfig()
     {
@@ -23,7 +23,7 @@ class ModuleTest extends TestCase
     }
 
     /**
-     *
+     * @inheritdoc
      */
     public function testGetAutoloaderConfig()
     {

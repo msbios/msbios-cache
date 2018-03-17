@@ -8,15 +8,6 @@ namespace MSBios\Cache;
 
 return [
 
-    'service_manager' => [
-        'factories' => [
-            Module::class =>
-                Factory\ModuleFactory::class,
-            StorageInterface::class =>
-                Factory\StorageFactory::class
-        ]
-    ],
-
     Module::class => [
         'adapter' => [
             'name' => 'Filesystem',

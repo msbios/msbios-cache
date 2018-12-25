@@ -6,34 +6,34 @@
 
 namespace MSBios\Cache;
 
+use Zend\Cache\Storage\Adapter\Filesystem;
+
 return [
 
     'service_manager' => [
         'factories' => [
-            Module::class =>
-                Factory\ModuleFactory::class,
-            StorageInterface::class =>
-                Factory\StorageFactory::class
+            // ...
         ]
     ],
 
-    Module::class => [
-        'adapter' => [
-            'name' => 'Filesystem',
-            'options' => [
-                'cache_dir' => './data/cache',
-                'ttl' => 3600
+    'caches' => [
+        'FilesystemCache' => [
+            'adapter' => [
+                'name' => Filesystem::class,
+                'options' => [
+                    'cache_dir' => './data/cache',
+                    'ttl' => 3600
+                ]
+            ],
+            'plugins' => [
+                [
+                    'name' => 'serializer',
+                    'options' => []
+                ],
+                'exception_handler' => [
+                    'throw_exceptions' => true
+                ]
             ]
-        ],
-        'plugins' => [
-            [
-                'name' => 'serializer',
-                'options' => []
-            ],
-            'exception_handler' => [
-                'throw_exceptions' => true
-            ],
         ]
     ]
-
 ];

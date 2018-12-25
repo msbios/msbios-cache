@@ -6,6 +6,8 @@
 return [
     'modules' => [
         'Zend\Serializer',
+        'Zend\Cache',
+        'MSBios\Cache',
     ],
     'module_listener_options' => [
         'module_paths' => [

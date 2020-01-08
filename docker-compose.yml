@@ -20,6 +20,30 @@ services:
     - 6379:6379
     # command: redis-server --requirepass secret
 
+  # mongo
+  mongo-cli:
+    image: mongo:3.4-xenial
+    environment:
+      MONGO_DATA_DIR: /var/www/data/cache
+      MONGO_INITDB_ROOT_USERNAME: demo
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+    - mongo-data:/var/www/data/cache
+    ports:
+    - 27017:27017
+    command: mongod --smallfiles
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+    - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo-cli
+      ME_CONFIG_MONGODB_ADMINUSERNAME: demo
+      ME_CONFIG_MONGODB_ADMINPASSWORD: secret
+
 volumes:
   composer:
   redis:
+  mongo-data:

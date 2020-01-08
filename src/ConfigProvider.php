@@ -3,6 +3,7 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
+
 namespace MSBios\Cache;
 
 use Laminas\Cache\Storage\Adapter\Filesystem;
@@ -25,9 +26,10 @@ class ConfigProvider
                         'name' => Filesystem::class,
                         'options' => [
                             'cache_dir' => './data/cache',
-                            'ttl' => 3600
+
                         ]
                     ],
+                    'ttl' => 86400,
                     'plugins' => [
                         // [
                         //     'name' => 'serializer',

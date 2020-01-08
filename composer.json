@@ -30,7 +30,8 @@
   },
   "require-dev": {
     "msbios/test": "^2.0",
-    "laminas/laminas-migration": "^1.0"
+    "laminas/laminas-migration": "^1.0",
+    "mongodb/mongodb": "^1.5"
   },
   "scripts": {
     "cs-check": "phpcs",

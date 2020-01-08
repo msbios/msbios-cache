@@ -5,8 +5,8 @@
  */
 return [
     'modules' => [
-        'Zend\Serializer',
-        'Zend\Cache',
+        'Laminas\Serializer',
+        'Laminas\Cache',
         'MSBios\Cache',
     ],
     'module_listener_options' => [

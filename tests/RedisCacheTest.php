@@ -5,13 +5,13 @@
  */
 namespace MSBiosTest\Cache;
 
-use Laminas\Cache\Storage\Adapter\Filesystem;
+use Laminas\Cache\Storage\Adapter\Redis;
 
 /**
- * Class FilesystemCacheTest
+ * Class RedisCacheTest
  * @package MSBiosTest\Cache
  */
-class FilesystemCacheTest extends AbstractCacheTest
+class RedisCacheTest extends AbstractCacheTest
 {
 
     /**
@@ -19,6 +19,6 @@ class FilesystemCacheTest extends AbstractCacheTest
      */
     protected function getAdapterName(): string
     {
-        return Filesystem::class;
+        return Redis::class;
     }
 }

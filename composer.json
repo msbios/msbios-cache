@@ -24,14 +24,13 @@
     }
   },
   "require": {
-    "zendframework/zend-cache": "^2.7",
-    "zendframework/zend-serializer": "^2.8",
-    "msbios/msbios": "^1.0"
+    "laminas/laminas-cache": "^2.9",
+    "laminas/laminas-serializer": "^2.9",
+    "msbios/msbios": "^2.0"
   },
   "require-dev": {
-    "msbios/stdlib": "^1.0",
-    "msbios/debug": "^1.0",
-    "msbios/test": "^1.0"
+    "msbios/test": "^2.0",
+    "laminas/laminas-migration": "^1.0"
   },
   "scripts": {
     "cs-check": "phpcs",

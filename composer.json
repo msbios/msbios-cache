@@ -44,7 +44,8 @@
   },
   "extra": {
     "zf": {
-      "component": "MSBios\\Cache"
+      "component": "MSBios\\Cache",
+      "config-provider": "MSBios\\Cache\\ConfigProvider"
     }
   }
 }
